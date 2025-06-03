@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "weather": {
+      "command": "node",
+      "args": [
+        "REMPLACEZ_PAR_VOTRE_CHEMIN\\weather-mcp-server\\src\\index.js"
+      ]
+    }
+  }
+}
