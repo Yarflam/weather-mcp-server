@@ -43,7 +43,7 @@ File: `~/Library/Application Support/Claude/claude_desktop_config.json`
     "weather": {
       "command": "node",
       "args": [
-        "C:\\Users\\iarfl\\Documents\\Workspace\\Claude\\weather-mcp-server\\src\\index.js"
+        "YOUR_FULL_PATH_HERE\\weather-mcp-server\\src\\index.js"
       ]
     }
   }
@@ -202,7 +202,7 @@ Fichier : `~/Library/Application Support/Claude/claude_desktop_config.json`
     "weather": {
       "command": "node",
       "args": [
-        "C:\\Users\\iarfl\\Documents\\Workspace\\Claude\\weather-mcp-server\\src\\index.js"
+        "REMPLACEZ_PAR_VOTRE_CHEMIN\\weather-mcp-server\\src\\index.js"
       ]
     }
   }
