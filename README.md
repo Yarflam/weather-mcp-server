@@ -1,3 +1,162 @@
+# 🌤️ Weather MCP Server (Free & Sydney Default)
+
+A Model Context Protocol (MCP) server for retrieving weather data via the free Open-Meteo API. **No API key required!** Sydney is configured as the default city.
+
+## ✨ Features
+
+- 🆓 **100% free** - Uses Open-Meteo API (no key required)
+- 🇦🇺 **Sydney by default** - Perfect for Australia  
+- 🌍 **Global support** - All cities worldwide
+- 🗓️ **7-day forecasts** - Detailed weather data
+- 🔍 **City search** - Find coordinates easily
+- 🌐 **Multi-language** - English interface with French support
+
+## 🚀 Quick Installation
+
+1. **Install dependencies:**
+```bash
+cd weather-mcp-server
+npm install
+```
+
+2. **Test immediately:**
+```bash
+npm start
+```
+
+**That's it!** No additional configuration needed.
+
+## 🛠️ Configuration with Claude Desktop
+
+Add this configuration to your `claude_desktop_config.json`:
+
+### Windows
+File: `%APPDATA%\Claude\claude_desktop_config.json`
+
+### macOS  
+File: `~/Library/Application Support/Claude/claude_desktop_config.json`
+
+### JSON Configuration
+```json
+{
+  "mcpServers": {
+    "weather": {
+      "command": "node",
+      "args": [
+        "C:\\Users\\iarfl\\Documents\\Workspace\\Claude\\weather-mcp-server\\src\\index.js"
+      ]
+    }
+  }
+}
+```
+
+**Note:** Adjust the path according to your installation!
+
+## 🔧 Available Tools
+
+### 1. `get_current_weather`
+Current weather (Sydney by default)
+- **city** (optional): City name (default: Sydney)
+- **country** (optional): Country code (AU, FR, etc.)
+
+### 2. `get_weather_forecast`  
+7-day forecasts (Sydney by default)
+- **city** (optional): City name (default: Sydney)
+- **country** (optional): Country code
+- **days** (optional): Number of days 1-7 (default: 7)
+
+### 3. `get_weather_by_coordinates`
+Weather by GPS coordinates (Sydney by default)
+- **lat** (optional): Latitude (default: -33.8688)
+- **lon** (optional): Longitude (default: 151.2093)
+- **days** (optional): Number of days 1-7 (default: 1)
+
+### 4. `search_cities`
+Search cities worldwide
+- **query** (required): City name to search
+
+## 📝 Usage Examples with Claude
+
+Once configured, you can ask Claude:
+
+**Default weather (Sydney):**
+- "What's the weather?"
+- "Current weather"
+- "Week forecast"
+
+**Other cities:**
+- "Weather in Paris"
+- "5-day forecast for London"
+- "Temperature in Tokyo"
+
+**City search:**
+- "Find cities named Melbourne"
+- "Search for Springfield"
+
+**By coordinates:**
+- "Weather at coordinates 48.8566, 2.3522"
+
+## 🌟 Open-Meteo Benefits
+
+- ✅ **Completely free** - No reasonable usage limits
+- ✅ **No registration** - Works immediately  
+- ✅ **Accurate data** - Professional weather models
+- ✅ **Modern API** - Simple and fast JSON
+- ✅ **Reliable** - Stable European service
+
+## 🗺️ Why Sydney as Default?
+
+Sydney is configured as the default city because:
+- 🏙️ **Major metropolis** - Representative of Australia
+- 🌤️ **Varied climate** - Good weather example
+- 🇦🇺 **Unique timezone** - GMT+10/+11 depending on season
+- 📍 **Exact coordinates** - -33.8688°, 151.2093°
+
+## 🐛 Troubleshooting
+
+### "City not found"
+- Check spelling
+- Try with country code: "Paris, FR"
+- Use `search_cities` to find the correct name
+
+### Network error
+- Check your internet connection
+- Open-Meteo is sometimes temporarily unavailable
+
+### Server won't start
+- Check Node.js: `node --version` (≥16 required)
+- Install dependencies: `npm install`
+
+## 🔄 Comparison with OpenWeatherMap
+
+| Criteria | Open-Meteo | OpenWeatherMap |
+|----------|------------|----------------|
+| **Price** | 🆓 Free | 🆓 Free (limited) |
+| **API Key** | ❌ None | ✅ Required |
+| **Registration** | ❌ None | ✅ Mandatory |
+| **Forecasts** | 7 days | 5 days (free) |
+| **Accuracy** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| **Reliability** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+
+## 📦 Dependencies
+
+- `@modelcontextprotocol/sdk`: Official MCP SDK
+- `node-fetch`: HTTP client for API requests
+
+**No heavy external dependencies!**
+
+## 📄 License
+
+MIT - Use freely in your projects!
+
+---
+
+🇦🇺 **Made with ❤️ for Sydney and the world**
+
+---
+
+## 🇫🇷 Version Française / French Version
+
 # 🌤️ Serveur MCP Météo (Gratuit & Sydney par défaut)
 
 Un serveur MCP (Model Context Protocol) pour récupérer des données météorologiques via l'API gratuite Open-Meteo. **Aucune clé API requise !** Sydney est configuré comme ville par défaut.

@@ -1,28 +1,28 @@
 @echo off
-echo 🌤️ Installation du serveur MCP Météo (Sydney par défaut)
+echo 🌤️ Weather MCP Server Installation (Sydney default)
 echo.
 
-echo 📦 Installation des dépendances Node.js...
+echo 📦 Installing Node.js dependencies...
 call npm install
 
 if %errorlevel% neq 0 (
-    echo ❌ Erreur lors de l'installation des dépendances
+    echo ❌ Error during dependencies installation
     pause
     exit /b 1
 )
 
 echo.
-echo ✅ Installation terminée !
+echo ✅ Installation completed!
 echo.
-echo 🇦🇺 Ce serveur utilise Sydney comme ville par défaut
-echo 🆓 API Open-Meteo - 100%% gratuite, aucune clé requise !
+echo 🇦🇺 This server uses Sydney as default city
+echo 🆓 Open-Meteo API - 100%% free, no key required!
 echo.
-echo 🚀 Test rapide : npm start
-echo 📋 Configuration Claude : voir README.md
+echo 🚀 Quick test: npm start
+echo 📋 Claude configuration: see README.md
 echo.
-echo 💡 Exemples d'usage une fois configuré avec Claude :
-echo    - "Quelle est la météo ?" (Sydney par défaut)
-echo    - "Météo à Paris"
-echo    - "Prévisions de la semaine"
+echo 💡 Usage examples once configured with Claude:
+echo    - "What's the weather?" (Sydney default)
+echo    - "Weather in Paris"
+echo    - "Week forecast"
 echo.
 pause
